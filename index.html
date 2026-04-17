@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Geometry Dash - 1 & 2 Players</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Main Menu -->
+        <div id="menu" class="screen active">
+            <h1 class="glitch" data-text="GEOMETRY DASH">GEOMETRY DASH</h1>
+            <div id="record-meter" class="record-container">
+                <span class="record-label">ENG YAXSHI NATIJA</span>
+                <span id="best-score" class="record-value">0m</span>
+            </div>
+            <div class="menu-buttons">
+                <button id="btn-1p" class="neon-button">1 O'YINCHI</button>
+                <button id="btn-2p" class="neon-button secondary">2 O'YINCHI</button>
+            </div>
+            <div class="controls-hint">
+                <p>P1: SPACE / CLICK</p>
+                <p class="p2-hint">P2: UP ARROW</p>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div class="score-container">
+                <span id="score">0m</span>
+            </div>
+            <div id="p2-score-container" class="hidden">
+                <span id="p2-score">0m</span>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over" class="screen">
+            <h2 id="death-msg">BOOM!</h2>
+            <p id="final-score">Masofa: 0m</p>
+            <button id="btn-restart" class="neon-button">QAYTA BOSHLASH</button>
+            <button id="btn-home" class="neon-button secondary">MENUGA QAYTISH</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
